@@ -15,4 +15,5 @@ function getClock() {
 getClock();
 
 // setInterval (호출하려는 펑션 이름, 호출 시간)
+// 호출시간마다 실행되는 함수 (실시간처럼 보임)
 setInterval(getClock, 1000);
