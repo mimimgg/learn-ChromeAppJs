@@ -1,14 +1,20 @@
-const toDoForm = document.querySelector('#todo-form');
-const toDoInput = toDoForm.querySelector('input');
-const toDoList = document.querySelector('#todo-list');
+const toDoForm = document.querySelector("#todo-form");
+const toDoInput = toDoForm.querySelector("input");
+const toDoList = document.querySelector("#todo-list");
 
-function handleTodoSubmit(event) {
-  event.preventDefault();
-
-  // input의 현재 value를 새로운 변수에 복사
-  const newTodo = toDoInput.value;
-
-  toDoInput.value = '';
+function paintToDo(newTodo) {
+  const li = document.createElement("li");
+  const span = document.createElement("span");
+  li.appendChild(span);
+  span.innerText = newTodo;
+  toDoList.appendChild(li);
 }
 
-toDoForm.addEventListener('submit', handleTodoSubmit);
+function handleToDoSumit(event) {
+  event.preventDefault();
+  const newTodo = toDoInput.value;
+  toDoInput.value = "";
+  paintToDo(newTodo);
+}
+
+toDoForm.addEventListener("submit", handleToDoSumit);
