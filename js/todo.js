@@ -12,8 +12,9 @@ function saveToDos() {
 
 function deleteToDo(event) {
   const li = event.target.parentElement;
-  console.log(li.id);
   li.remove();
+  toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+  saveToDos();
 }
 
 function paintToDo(newTodo) {
@@ -54,4 +55,9 @@ if (savedToDos !== null) {
   parsedToDos.forEach(paintToDo);
 }
 
+function sexyFilter() {}
 
+// filter는 sexyfilter를 부르고 1,2,3,4를 넣어서 호출함
+[1, 2, 3, 4].filter(sexyFilter);
+
+sexyFilter(4);
