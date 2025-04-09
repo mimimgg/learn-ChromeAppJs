@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+:root {
+  /* font-family */
+  --font-noto: "Noto Sans", sans-serif;
+  --font-dot: "Codystar", sans-serif;
+  --font-bubble: "Oi", serif;
+
+  /* font-size */
+  --font-size-base: 16px;
+  --font-size-lg: 20px;
+  --font-size-sm: 14px;
+
+  /* color */
+  --color-default: #1a1a1a;
+
+  /* space */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+
+  /* container */
+  --size-container: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-noto);
+  color: var(--color-default);
+  font-size: var(--font-size-base);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button, input {
+  font: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
