@@ -25,9 +25,15 @@
 
         <!-- login -->
         <form class="login-form">
-          <input type="text" id="username" placeholder="What is your name?" />
-          <button type="submit">LOGIN</button>
+          <input 
+            required 
+            type="text" 
+            maxlength="5" 
+            id="username" 
+            placeholder="What is your name?" />
+          <input type="submit" class="submit-btn" value="LOGIN">
         </form>
+        <h4 class="greeting hidden"></h4>
       </div>
     </div>
 
