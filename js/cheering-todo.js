@@ -1,20 +1,29 @@
 const cheering = [
-  { text: "오늘도 정말 수고했어! 👍" },
-  { text: "포기하지 않고 계속 나아가는 너를 응원해! 💪" },
-  { text: "잘 안 풀릴 때도 있겠지만, 넌 분명 해낼 수 있을 거야! ✨" },
-  { text: "네 안에 숨겨진 가능성은 무한대야! 🚀" },
-  { text: "작은 성공들이 모여 큰 결과를 만들 거야! 😊" },
-  { text: "힘들어도 웃음을 잃지 않는 네 모습이 아름다워! 😊" },
-  { text: "넘어져도 괜찮아, 다시 일어설 수 있어! 툭툭 털고 다시 가자! 💖" },
-  { text: "네 꿈을 향해 나아가는 여정을 항상 응원할게! 🌟" },
-  { text: "지금까지 해온 것처럼, 앞으로도 멋지게 해낼 거야! 믿어! 🙌" },
-  { text: "네 노력은 절대 배신하지 않을 거야! 조금만 더 힘내! 🍀" },
+  { text: "You did a great job today! 👍" },
+  { text: "I support you for not giving up and moving forward! 💪" },
+  { text: "There may be tough times, but you can definitely make it! ✨" },
+  { text: "Your hidden potential is limitless! 🚀" },
+  { text: "Small successes will add up to big achievements! 😊" },
+  { text: "Your ability to keep smiling even in tough times is beautiful! 😊" },
+  { text: "It's okay to fall, you can always get back up! Shake it off and keep going! 💖" },
+  { text: "I will always cheer for your journey toward your dreams! 🌟" },
+  { text: "Just like you've done so far, you'll keep doing great! Believe in yourself! 🙌" },
+  { text: "Your efforts will never betray you! Keep going just a little more! 🍀" },
 ];
+
 
 const cheerUp = document.querySelector(".cheering span");
 
 // 랜덤하게 텍스트를 노출하게 함
 // Math.random() - 0~1사이의 랜덤한 숫자
-const cheeringText = cheering[Math.floor(Math.random() * cheering.length)];
 
-cheerUp.innerText = cheeringText.text;
+function updateCheeringText() {
+  const randomIndex = Math.floor(Math.random() * cheering.length);
+  cheerUp.innerText = cheering[randomIndex].text;
+}
+
+// 3초마다(updateCheeringText) 함수 실행
+// setInterval(updateCheeringText, 3000);
+
+// 페이지 로드 시 첫 메시지 표시
+updateCheeringText();

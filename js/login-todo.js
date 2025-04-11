@@ -12,20 +12,20 @@ function handleLoginClick(e) {
   loginForm.classList.add(HIDDEN_CLASSNAME);
   const username = loginInput.value;
   // 로컬스토리지에 이름을 담는다.
-  localStorage.setItem(USERNAME_KEY, username);
+  sessionStorage.setItem(USERNAME_KEY, username);
   // 환영인사 남기기
   paintGreetings(username);
 }
 
 loginForm.addEventListener("submit", handleLoginClick);
 
-function paintGreetings(username){
-  greeting.innerText = `HELLO ${username}👋`;
+function paintGreetings(username) {
+  greeting.innerText = `WELCOME TO ${username}👋`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
-// localstorage에 입력된 값 가져오기
-const savedUserName = localStorage.getItem(USERNAME_KEY);
+// sessionStorage에 입력된 값 가져오기
+const savedUserName = sessionStorage.getItem(USERNAME_KEY);
 
 if (savedUserName === null) {
   // 입력 form 노출
